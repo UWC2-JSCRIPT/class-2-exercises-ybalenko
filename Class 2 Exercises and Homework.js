@@ -70,16 +70,24 @@ if (res) {
 // 7. You are given an assignmentDate as a string in the format "month/day/year"
 // i.e. '1/21/2019' - but this could be any date.
 // Convert this string to a Date
-const assignmentDate = '1/21/2019';
 
+const assignmentDateStr = '1/21/2019'
+const assignmentDate = new Date(Date.parse(assignmentDateStr))
+console.log(assignmentDate)
 
 // 8. Create a new Date instance to represent the dueDate.  
 // This will be exactly 7 days after the assignment date.
+
+let dueDate = new Date(assignmentDate)
+dueDate.setDate(dueDate.getDate() + 7)  //method returns the day of the month for the specified date according to local time.
+console.log(dueDate)
 
 
 // 9. Use dueDate values to create an HTML time tag in format
 // <time datetime="YYYY-MM-DD">Month day, year</time>
 // I have provided a months array to help
+// 10. log this value using console.log
+
 const months = [
     'January',
     'February',
@@ -95,5 +103,13 @@ const months = [
     'December'
 ];
 
+const year = dueDate.getFullYear()
+const month = dueDate.getMonth()
+const day = dueDate.getDate()
 
-// 10. log this value using console.log
+let monthStr = (month + 1).toString()
+if (month < 10) {
+    monthStr = '0' + (month + 1).toString()
+}
+
+console.log(`<time datetime="${year}-${monthStr}-${day}">${months[month]} ${day}, ${year}</time > `)
