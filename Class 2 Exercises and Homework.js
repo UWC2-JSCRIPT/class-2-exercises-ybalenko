@@ -57,6 +57,15 @@ console.log(board[2])
 // - Use rubular to check a few emails: https://rubular.com/
 // - Use regexp test method https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test
 
+const emailVerification = new RegExp('^([a-zA-Z0-9\.\-\_]*)@([a-zA-Z0-9\-]*)\.([a-zA-Z]*)$');
+res = emailVerification.test('myEmail!123@test1.com')
+console.log(res)
+if (res) {
+    console.log("Email format is correct")
+} else {
+    console.log("Email format is not correct")
+}
+
 
 // 7. You are given an assignmentDate as a string in the format "month/day/year"
 // i.e. '1/21/2019' - but this could be any date.
