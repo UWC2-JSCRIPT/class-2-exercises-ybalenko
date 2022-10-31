@@ -5,6 +5,19 @@
 // - 'favorite food'
 // - bestFriend (object with the same 3 properties as above)
 
+const yuliaB = {
+    firstname: "Yulia",
+    lastName: "Balenko",
+    favFood: "chowder",
+    bestFriend: {
+        name: "Kate",
+        surname: "Smith",
+        favouriteFood: "stew"
+    }
+}
+
+console.log("My best friend\'s first name is", yuliaB.bestFriend.name)
+console.log("My favorite food is", yuliaB.favFood)
 
 // 2. console.log best friend's firstName and your favorite food
 
@@ -44,18 +57,18 @@ const assignmentDate = '1/21/2019';
 // <time datetime="YYYY-MM-DD">Month day, year</time>
 // I have provided a months array to help
 const months = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December'
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
 ];
 
 
